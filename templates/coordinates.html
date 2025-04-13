@@ -1,0 +1,7 @@
+<!doctype html>
+<title>Where is the ISS ?</title>
+{% if x, y %}
+  <h3>Coordinates of the ISS: {{ x,y }}</h3>
+{% else %}
+  <h1>Errors: coordinates not found.</h1>
+{% endif %}
