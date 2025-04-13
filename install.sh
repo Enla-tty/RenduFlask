@@ -1,8 +1,10 @@
 #!/bin/bash
 
-if [ type python >/dev/null 2>&1 && if type pip >/dev/null 2>&1 ]
-    then 
+if [[ -n python && -n pip ]]
+then 
     python -m venv venv;
     source ./venv/bin/activate;
     pip install -r requirements.txt;
-fi;
+else 
+    echo "Python and/or pip not found!";
+fi
